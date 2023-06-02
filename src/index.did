@@ -1,0 +1,9 @@
+type User = record { id : text; age : nat32; username : text };
+service : () -> {
+  get : (text) -> (opt User) query;
+  getRandomness : () -> (vec nat8);
+  getUsers : () -> (vec User) query;
+  randomHash : () -> (text) query;
+  set : (text, nat32) -> (text);
+  tecdsa : () -> (vec nat8);
+}
